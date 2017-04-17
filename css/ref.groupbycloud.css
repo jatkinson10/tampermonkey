@@ -16,6 +16,46 @@ time, mark, audio, video, input
  font-family: 'Source Sans Pro', 'Optima', sans-serif;
 }
 
+
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex-basis: 100%;
+}
+
+@media screen and (min-width: 800px) {
+  .col {
+    flex: 1;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  ._25 {
+    flex: .25;
+  }
+  ._75 {
+    flex: .75;
+  }
+  ._50 {
+    flex: .5;
+  }
+  ._33 {
+    flex: .33;
+  }
+}
+
+
+
+
  body {
    background:#ededed;
  }
@@ -37,5 +77,16 @@ time, mark, audio, video, input
  }
 
  .navigation {
-   background:#00f;
+   background:#fff;
+   color:#000;
  }
+
+.navigation a {
+    color: #000 !important;
+    font-size: 1.2em;
+}
+
+.navigation div>div>div {
+    padding: 0.2em;
+
+}
