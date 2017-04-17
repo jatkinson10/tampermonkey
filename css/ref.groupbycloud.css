@@ -1,10 +1,10 @@
 # CSS Overrides for the GBI ref app
 #
-#
+# Created by Jay Atkinson
 
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
-
+### Global Elements ###########################################################
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
 blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
 ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
@@ -16,9 +16,32 @@ time, mark, audio, video, input
  font-family: 'Source Sans Pro', 'Optima', sans-serif;
 }
 
-
+body {
+  background:#ededed;
+}
 section {
-  max-width: 1200px;
+  background:#fff;
+}
+
+button, input[type=button], input[type=submit] {
+  background:#aaa;
+
+}
+
+input[type=text] {
+  font-size:1.1em;
+  padding:.2em;
+}
+
+input[type=text]:focus {
+  background:#ffa;
+  border:#770;
+  padding:.2em;
+}
+
+### Flex Grid #################################################################
+.header, section {
+  max-width: 1500px;
   margin: 0 auto;
 }
 
@@ -53,29 +76,33 @@ section {
   }
 }
 
+### The "Header"###############################################################
+.header section {
+  background:inherit;
+}
 
+#cookieForm input {
+  background:#fdfdfd;
+  border: solid 1px #aaa;
+  padding: 0.5em;
+}
+#cookieForm input:focus {
+  background:#ffa;
+}
 
+#cookieForm {
+  background:#ededed;
+  color: #777;
+}
+#cookieForm a {
+  display:inline-block;
+  padding: 0.5em;
+  background: #aaa;
+  border: solid 1px #333;
+  color:#333;
+}
 
- body {
-   background:#ededed;
- }
-
- button, input[type=button], input[type=submit] {
-   background:#f00;
-
- }
-
- input[type=text] {
-   font-size:1.1em;
-   padding:.2em;
- }
-
- input[type=text]:focus {
-   background:#ffa;
-   border:#770;
-   padding:.2em;
- }
-
+### The "Navigation" ##########################################################
  .navigation {
    background:#fff;
    color:#000;
@@ -90,3 +117,4 @@ section {
     padding: 0.2em;
 
 }
+### :end The "Navigation"
