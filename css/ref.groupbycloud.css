@@ -1,10 +1,12 @@
-# CSS Overrides for the GBI ref app
-#
-# Created by Jay Atkinson
+/* CSS Overrides for the GBI ref app  */
+/*                                    */
+/* Created by Jay Atkinson            */
 
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
 
-### Global Elements ###########################################################
+/* Global Elements */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
 blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
 ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
@@ -13,7 +15,7 @@ tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
 figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
 time, mark, audio, video, input
 {
- font-family: 'Source Sans Pro', 'Optima', sans-serif;
+ font-family:'Source Sans Pro', 'Optima', sans-serif;
 }
 
 body {
@@ -23,8 +25,28 @@ section {
   background:#fff;
 }
 
+form {
+  background: #fff;
+  padding: 0.5em;
+}
+
 button, input[type=button], input[type=submit] {
-  background:#aaa;
+  background:#ccc;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.1em;
+  border: solid 2px #ddd;
+  border-bottom: solid 2px #aaa;
+  border-right: solid 2px #aaa;
+  border-radius: 15px;
+  padding: 0.1em 1em;
+  color: #333;
+}
+
+button:hover, input[type=button]:hover, input[type=submit]:hover {
+  background:#ddd;
+  border: solid 2px #ccc;
+  border-top: solid 2px #aaa;
+  border-left: solid 2px #aaa;
 
 }
 
@@ -39,8 +61,9 @@ input[type=text]:focus {
   padding:.2em;
 }
 
-### Flex Grid #################################################################
-.header, section {
+/* Flex Grid */
+
+.header, section  {
   max-width: 1500px;
   margin: 0 auto;
 }
@@ -76,16 +99,26 @@ input[type=text]:focus {
   }
 }
 
-### The "Header"###############################################################
-.header section {
-  background:inherit;
+@media screen and (max-width: 800px) {
+  ._25 {
+    flex: 1;
+  }
 }
+
+
+/* The Header */
+
 
 #cookieForm input {
   background:#fdfdfd;
   border: solid 1px #aaa;
-  padding: 0.5em;
+  padding: 0.5em 1em;
 }
+
+.header section {
+  background:inherit;
+}
+
 #cookieForm input:focus {
   background:#ffa;
 }
@@ -96,25 +129,107 @@ input[type=text]:focus {
 }
 #cookieForm a {
   display:inline-block;
-  padding: 0.5em;
-  background: #aaa;
-  border: solid 1px #333;
+  font-family: 'Oswald', sans-serif;
+  padding: 0.2em 1em;
+  background: #ccc;
+  border: solid 2px #ddd;
+  border-bottom: solid 2px #aaa;
+  border-right: solid 2px #aaa;
+  border-radius: 15px;
   color:#333;
+  text-decoration: none;
+  font-size: 1em;
 }
 
-### The "Navigation" ##########################################################
- .navigation {
-   background:#fff;
-   color:#000;
+#cookieForm a:hover {
+  background:#ddd;
+  border: solid 2px #ccc;
+  border-top: solid 2px #aaa;
+  border-left: solid 2px #aaa;
+}
+
+
+/* The Navigation */
+
+.navigation b {
+   display: flex;
+   padding: 0.5em;
+   font-size: 1.4em;
+   background-color: #ccc;
+   margin-bottom: .5em;
+   font-family: 'Permanent Marker', sans-serif;
+
  }
 
-.navigation a {
-    color: #000 !important;
-    font-size: 1.2em;
+ .navigation b span{
+   flex:1;
+   text-align: right;
+   font-size:.7em;
+   padding-top:.5em;
+   color: #777;
+
+ }
+
+.navigation {
+  background-color: #fff;
+  color:#333;
 }
 
 .navigation div>div>div {
     padding: 0.2em;
 
 }
-### :end The "Navigation"
+
+.refinementsHolder {
+    max-height: 1000px;
+}
+
+.refinementsHolder div>div {
+    display:flex;
+}
+
+.refinementsHolder a {
+    flex:1;
+    color: #333 !important;
+    font-size: 1.2em;
+}
+.refinementsHolder a:hover {
+    text-decoration:none;
+}
+.refinementsHolder a::first-letter {
+    font-size: 1.9em;
+}
+
+.refinementsHolder span.count {
+    flex: .25;
+    color: #333 !important;
+    font-size: 1.2em;
+    text-align: right;
+}
+
+
+.moreLink {
+  padding: 0.5em;
+  font-size : .8em;
+  text-align: right;
+
+}
+
+/* Results */
+
+.deleteCheckbox {
+    display:inline-block;
+    width:10px;
+    height: 10px;
+    padding:0 3px 10px 7px;
+    border-radius: 15px;
+    background-color: #777;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.deleteCheckbox:hover {
+
+    background-color: #aaa;
+}
