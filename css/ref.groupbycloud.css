@@ -34,11 +34,7 @@ button, input[type=button], input[type=submit] {
   background:#ccc;
   font-family: 'Oswald', sans-serif;
   font-size: 1.1em;
-  border: solid 2px #ddd;
-  border-bottom: solid 2px #aaa;
-  border-right: solid 2px #aaa;
-  border-radius: 15px;
-  padding: 0.1em 1em;
+  padding: 0.1em 1.5em;
   color: #333;
 }
 
@@ -157,7 +153,7 @@ input[type=text]:focus {
    font-size: 1.4em;
    background-color: #ccc;
    margin-bottom: .5em;
-   font-family: 'Permanent Marker', sans-serif;
+   font-family: 'Oswald', sans-serif;
 
  }
 
@@ -217,6 +213,12 @@ input[type=text]:focus {
 
 /* Results */
 
+.results form {
+  border:none;
+  background: #ccc;
+  padding: 10px 10px 11px 10px;
+}
+
 .deleteCheckbox {
     display:inline-block;
     width:10px;
@@ -232,4 +234,68 @@ input[type=text]:focus {
 .deleteCheckbox:hover {
 
     background-color: #aaa;
+}
+
+.columnSpecifics {
+  display: flex;
+  flex-flow: row-reverse wrap;
+  background:#ededed;
+  border: solid 1px #aaa;
+  padding: 0.5em 1em;
+  color:#333;
+
+}
+
+
+.columnControls {
+  float:none;
+  flex:50%;
+  text-align:right;
+
+}
+
+.columnControls a {
+  text-transform: capitalize;
+  display:inline-block;
+  font-family: 'Oswald', sans-serif;
+  padding: 0.2em 1em;
+  background: #ccc;
+  border: solid 2px #ddd;
+  border-bottom: solid 2px #aaa;
+  border-right: solid 2px #aaa;
+  border-radius: 15px;
+  color:#333;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.columnControls a:hover {
+  background:#ddd;
+  border: solid 2px #ccc;
+  border-top: solid 2px #aaa;
+  border-left: solid 2px #aaa;
+}
+
+.columnSpecifics>a {
+  flex: 50%;
+  font-family: 'Oswald', sans-serif;
+
+  color:#333;
+  text-decoration: none;
+
+}
+
+.columnSpecifics fieldset {
+  flex:1;
+
+}
+
+.columnSpecifics a {
+  color:#333;
+}
+
+.smallResponse {
+  color: #777;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2em;
 }
