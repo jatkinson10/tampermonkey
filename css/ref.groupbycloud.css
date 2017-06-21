@@ -46,14 +46,18 @@ button:hover, input[type=button]:hover, input[type=submit]:hover {
 }
 
 input[type=text] {
-  font-size:1.1em;
-  padding:.2em;
+  font-size: 1.1em;
+  padding: .2em;
 }
 
 input[type=text]:focus {
   background:#ffa;
   border:#770;
   padding:.2em;
+}
+
+fieldset {
+  /* border: #007700; */
 }
 
 /* Flex Grid */
@@ -110,7 +114,8 @@ input[type=text]:focus {
 
 #cookieForm input {
   background:#fdfdfd;
-  border: solid 1px #aaa;
+  border:0;
+  border-bottom: solid 2px #aaa;
   padding: 0.5em 1em;
 }
 
@@ -120,10 +125,11 @@ input[type=text]:focus {
 
 #cookieForm input:focus {
   background:#ffa;
+  outline: none;
 }
 
 #cookieForm {
-  background:#ededed;
+  /* background: 0; */
   color: #777;
 }
 #cookieForm a {
@@ -147,11 +153,10 @@ input[type=text]:focus {
 
 .navigation b {
    display: flex;
-   padding: 0.5em;
-   font-size: 1.2em;
+   font-size: 1.1em;
    background-color: #e1eff7;
    margin-bottom: .8em;
-   padding: .8em 1.6em;
+   padding: .8em .8em .8em 1.4em;
    text-transform: uppercase;
 
  }
@@ -161,6 +166,7 @@ input[type=text]:focus {
    text-align: right;
    font-size:.5em;
    padding-top: .5em;
+   
    color: #777;
 
  }
@@ -168,6 +174,7 @@ input[type=text]:focus {
 .navigation {
   background-color: #fff;
   color:#333;
+
 }
 
 .navigation div>div>div {
@@ -184,10 +191,11 @@ input[type=text]:focus {
 }
 
 .refinementsHolder a {
-    flex:1;
+    flex:2 0 0;
     color: #007700 !important;
-    font-size: 1.2em;
+    font-size: 1.1em;
     padding: 0.8em 1.6em;
+    text-transform:uppercase;
 }
 .refinementsHolder a:hover {
     text-decoration:none;
@@ -198,9 +206,11 @@ input[type=text]:focus {
 
 .refinementsHolder span.count {
     flex: 1;
-    color: #e1eff7 !important;
+    color: #808d94 !important;
     font-size: .8em;
     text-align: right;
+    vertical-align: middle;
+    margin-right: .8em;
 }
 
 
