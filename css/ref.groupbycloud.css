@@ -52,6 +52,10 @@ button:hover, input[type=button]:hover, input[type=submit]:hover {
 input[type=text] {
   font-size: 1.1em;
   padding: .2em;
+  background:#fdfdfd;
+  border:0;
+  border-bottom: solid 2px #aaa;
+  padding: 0.5em 1em;
 }
 
 input[type=text]:focus {
@@ -305,25 +309,13 @@ fieldset {
 
 }
 
-.columnControls a> {
-  display:none;
+.columnControls a {
+    color: #007700 !important;
+    font-size: 1.1em;
+    padding: 0.8em 1.6em;
+    text-transform: uppercase;
+    text-decoration: none;
 }
-
-.columnControls a:before {
-  display:inline-block;
-  background:#007700;
-  font-size: 2em;
-  padding: 0.1em .4em;
-  margin: 0.8em;
-  border-radius: 1.6em;
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  content: '+';
-  font-weight: normal;
-  
-}
-
 
 .columnSpecifics>a {
   flex: 50%;
