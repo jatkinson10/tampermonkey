@@ -328,6 +328,13 @@ fieldset {
   flex:1;
 
 }
+.columnSpecifics fieldset a {
+  color: #007700 !important;
+  font-size: 1.1em;
+  padding: 0.8em 1.6em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
 
 .columnSpecifics a {
   color:#333;
