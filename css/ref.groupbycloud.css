@@ -29,6 +29,10 @@ form {
   padding: 0.8em;
 }
 
+a, button, input {
+  outline: none;
+}
+
 button, input[type=button], input[type=submit] {
   background:#007700;
   font-size: 1.1em;
@@ -57,7 +61,7 @@ input[type=text]:focus {
 }
 
 fieldset {
-  /* border: #007700; */
+
 }
 
 /* Flex Grid */
@@ -129,7 +133,7 @@ fieldset {
 }
 
 #cookieForm {
-  /* background: 0; */
+  background: #e1e1e2; 
   color: #777;
 }
 #cookieForm a {
@@ -154,7 +158,7 @@ fieldset {
 .navigation b {
    display: flex;
    font-size: 1.1em;
-   background-color: #e1eff7;
+   background-color: #e1e1e2;
    margin-bottom: .8em;
    padding: .8em .8em .8em 1.4em;
    text-transform: uppercase;
@@ -227,12 +231,44 @@ fieldset {
 
 .results form {
   border:none;
-  display: flex;
+
   flex-direction: row;
-  padding: 1.6em 3.2em;
-  font-size: 1em;
+  padding: 0.8em ;
+ 
   background: #fff;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+.results form input[type=submit] {
+  font-size: .8em;
+  border:0;
+  margin:0;
+}
+
+.results form input[type=text] {
+  font-size: .8em;
+  border:0;
+  border-bottom: 2px solid #004a00;
+  padding: .4em .8em;
+  margin:0 0.8em;
+}
+
+.results form a {
+  color: #007700;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: .7em;
+  padding: 0.4em 1.6em;
+  display: inline-block;
+}
+
+.results form .navLink a {
+  background:#007700;
+  font-size: 1.3em;
+  padding: 0.1em .4em;
+  border-radius: 1.6em;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .deleteCheckbox {
