@@ -2,9 +2,8 @@
 /*                                    */
 /* Created by Jay Atkinson            */
 
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
-@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 
 /* Global Elements */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
@@ -15,34 +14,34 @@ tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
 figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
 time, mark, audio, video, input
 {
- font-family:'Source Sans Pro', 'Optima', sans-serif;
+ font-family:'Roboto', 'Optima', sans-serif;
 }
 
 body {
   background:#ededed;
+  border-top: 15px solid #004a00;
 }
 section {
   background:#fff;
 }
 
 form {
-  background: #fff;
-  padding: 0.5em;
+  padding: 0.8em;
 }
 
 button, input[type=button], input[type=submit] {
-  background:#ccc;
-  font-family: 'Oswald', sans-serif;
+  background:#007700;
   font-size: 1.1em;
-  padding: 0.1em 1.5em;
-  color: #333;
+  padding: 0.8em 1.6em;
+  margin: 0.8em;
+  color: #fff;
+  text-transform: uppercase;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
 }
 
 button:hover, input[type=button]:hover, input[type=submit]:hover {
-  background:#ddd;
-  border: solid 2px #ccc;
-  border-top: solid 2px #aaa;
-  border-left: solid 2px #aaa;
+  background:#004a00;
+
 
 }
 
@@ -58,6 +57,10 @@ input[type=text]:focus {
 }
 
 /* Flex Grid */
+
+.header {
+  background: #007700;
+}
 
 .header, section  {
   max-width: 1500px;
@@ -125,23 +128,18 @@ input[type=text]:focus {
 }
 #cookieForm a {
   display:inline-block;
-  font-family: 'Oswald', sans-serif;
-  padding: 0.2em 1em;
-  background: #ccc;
-  border: solid 2px #ddd;
-  border-bottom: solid 2px #aaa;
-  border-right: solid 2px #aaa;
-  border-radius: 15px;
-  color:#333;
+  background:#007700;
+  padding: 0.8em 1.6em;
+  margin: 0.8em;
+  color: #fff;
   text-decoration: none;
-  font-size: 1em;
+  text-transform: uppercase;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
 }
 
 #cookieForm a:hover {
-  background:#ddd;
-  border: solid 2px #ccc;
-  border-top: solid 2px #aaa;
-  border-left: solid 2px #aaa;
+  background:#004a00;
+
 }
 
 
@@ -150,18 +148,19 @@ input[type=text]:focus {
 .navigation b {
    display: flex;
    padding: 0.5em;
-   font-size: 1.4em;
-   background-color: #ccc;
-   margin-bottom: .5em;
-   font-family: 'Oswald', sans-serif;
+   font-size: 1.2em;
+   background-color: #e1eff7;
+   margin-bottom: .8em;
+   padding: .8em 1.6em;
+   text-transform: uppercase;
 
  }
 
  .navigation b span{
    flex:1;
    text-align: right;
-   font-size:.7em;
-   padding-top:.5em;
+   font-size:.5em;
+   padding-top: .5em;
    color: #777;
 
  }
@@ -172,7 +171,7 @@ input[type=text]:focus {
 }
 
 .navigation div>div>div {
-    padding: 0.2em;
+    padding: 0;
 
 }
 
@@ -180,26 +179,27 @@ input[type=text]:focus {
     max-height: 1000px;
 }
 
-.refinementsHolder div>div {
+.refinementsHolder div {
     display:flex;
 }
 
 .refinementsHolder a {
     flex:1;
-    color: #333 !important;
+    color: #007700 !important;
     font-size: 1.2em;
+    padding: 0.8em 1.6em;
 }
 .refinementsHolder a:hover {
     text-decoration:none;
-}
-.refinementsHolder a::first-letter {
-    font-size: 1.9em;
+    background: #007700;
+    color: #fff !important;
 }
 
+
 .refinementsHolder span.count {
-    flex: .25;
-    color: #333 !important;
-    font-size: 1.2em;
+    flex: 1;
+    color: #e1eff7 !important;
+    font-size: .8em;
     text-align: right;
 }
 
@@ -211,12 +211,18 @@ input[type=text]:focus {
 
 }
 
+
+
 /* Results */
 
 .results form {
   border:none;
-  background: #ccc;
-  padding: 10px 10px 11px 10px;
+  display: flex;
+  flex-direction: row;
+  padding: 1.6em 3.2em;
+  font-size: 1em;
+  background: #fff;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
 }
 
 .deleteCheckbox {
@@ -224,7 +230,6 @@ input[type=text]:focus {
     width:10px;
     height: 10px;
     padding:0 3px 10px 7px;
-    border-radius: 15px;
     background-color: #777;
     color: white;
     text-decoration: none;
@@ -254,32 +259,28 @@ input[type=text]:focus {
 
 }
 
-.columnControls a {
-  text-transform: capitalize;
-  display:inline-block;
-  font-family: 'Oswald', sans-serif;
-  padding: 0.2em 1em;
-  background: #ccc;
-  border: solid 2px #ddd;
-  border-bottom: solid 2px #aaa;
-  border-right: solid 2px #aaa;
-  border-radius: 15px;
-  color:#333;
-  text-decoration: none;
-  font-size: 1em;
+.columnControls a> {
+  display:none;
 }
 
-.columnControls a:hover {
-  background:#ddd;
-  border: solid 2px #ccc;
-  border-top: solid 2px #aaa;
-  border-left: solid 2px #aaa;
+.columnControls a:before {
+  display:inline-block;
+  background:#007700;
+  font-size: 2em;
+  padding: 0.1em .4em;
+  margin: 0.8em;
+  border-radius: 1.6em;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  content: '+';
+  font-weight: normal;
+  
 }
+
 
 .columnSpecifics>a {
   flex: 50%;
-  font-family: 'Oswald', sans-serif;
-
   color:#333;
   text-decoration: none;
 
@@ -296,6 +297,5 @@ input[type=text]:focus {
 
 .smallResponse {
   color: #777;
-  font-family: 'Oswald', sans-serif;
   font-size: 1.2em;
 }
